@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OASIS Dashboard - View your reservations and manage tickets.">
+  <title>OASIS — Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+  <div class="app-wrapper" id="app">
+    <main class="main-content">
+      <div class="page-header">
+        <h1 id="greeting">Welcome back!</h1>
+        <p>Manage your train reservations from here.</p>
+      </div>
+
+      <div class="action-grid">
+        <a href="/reservation.html" class="action-card" id="action-book">
+          <div class="action-icon purple">🎫</div>
+          <div><h3>Book a Ticket</h3><p>Reserve your next train journey</p></div>
+        </a>
+        <a href="/cancellation.html" class="action-card" id="action-cancel">
+          <div class="action-icon red">❌</div>
+          <div><h3>Cancel Ticket</h3><p>Cancel an existing reservation</p></div>
+        </a>
+        <a href="#my-tickets" class="action-card" id="action-tickets">
+          <div class="action-icon amber">📋</div>
+          <div><h3>My Tickets</h3><p>View all your bookings below</p></div>
+        </a>
+      </div>
+
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-card purple"><div class="stat-label">Total Bookings</div><div class="stat-value" id="stat-total">—</div></div>
+        <div class="stat-card green"><div class="stat-label">Confirmed</div><div class="stat-value" id="stat-confirmed">—</div></div>
+        <div class="stat-card red"><div class="stat-label">Cancelled</div><div class="stat-value" id="stat-cancelled">—</div></div>
+      </div>
+
+      <div id="my-tickets">
+        <div class="page-header"><h2>🎫 My Tickets</h2></div>
+        <div class="ticket-list" id="ticket-list">
+          <div class="empty-state"><span class="icon">⏳</span><p>Loading your tickets...</p></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/particles.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OASIS - Cancel an existing train reservation using your PNR number.">
+  <title>OASIS — Cancel Ticket</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+  <div class="app-wrapper" id="app">
+    <main class="main-content">
+      <div class="page-header">
+        <h1>❌ Cancel Ticket</h1>
+        <p>Enter your PNR number to look up and cancel your booking.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon" style="background:linear-gradient(135deg,#dc2626,#ef4444)">🔍</div>
+          <div><h2>PNR Lookup</h2><p>Enter 10-digit PNR to find your ticket</p></div>
+        </div>
+
+        <div id="cancel-alert"></div>
+
+        <div class="form-group">
+          <label for="pnr-input">PNR Number</label>
+          <div style="display:flex;gap:.75rem">
+            <input type="text" id="pnr-input" class="form-control" placeholder="e.g. 4512345678" maxlength="10">
+            <button type="button" class="btn btn-primary" id="btn-lookup">Search</button>
+          </div>
+        </div>
+
+        <div id="pnr-result-area"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/particles.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/cancellation.js"></script>
+</body>
+</html>
