@@ -1,4 +1,4 @@
-# 🚂 OASIS — Online Reservation System
+# 🚂  — Online Reservation System
 
 A full-stack railway reservation system built with Node.js, Express, SQLite, and vanilla HTML/CSS/JS.
 
